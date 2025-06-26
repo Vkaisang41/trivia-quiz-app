@@ -8,19 +8,24 @@ Vincent Kaisang
 
 ## Description
 
-The **Trivia Quiz App** tests your general knowledge using multiple-choice questions from the *Science & Nature* category. Features include:
+The **Trivia Quiz App** tests your general knowledge using multiple-choice questions from the *Science & Nature* category.
 
-- Randomly fetched quiz questions from an API
+### Features
+
+- Randomly fetched quiz questions from a public trivia API
 - Multiple-choice format with shuffled answers
-- Immediate feedback on correct/incorrect answers
-- Live score tracking
-- Toggleable Dark Mode
-- Responsive design
+- Immediate feedback for correct or incorrect responses
+- Live score display after each question
+- Toggleable Dark Mode for low-light environments
+- Responsive layout for mobile and desktop screens
+
+>**Note**: When using dark mode, some question text may not appear clearly due to HTML entity encoding issues. It's best to use light mode for full visibility.
 
 ## Setup Instructions
 
-1. Clone this repository:
+1. **Clone this repository:**
 
    ```bash
    git clone https://github.com/vkaisang41/trivia-quiz-app.git
    cd trivia-quiz-app
+
