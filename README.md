@@ -36,3 +36,8 @@ The **Trivia Quiz App** tests your general knowledge using multiple-choice quest
 - CSS
 - JavaScript
 - Open Trivia Database API
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
