@@ -13,16 +13,22 @@ body {
   align-items: start;
   padding: 50px 20px;
   transition: background 0.3s ease, color 0.3s ease;
+  animation: fadeBody 0.5s ease-in-out;
 }
 
 .container {
-  background-color: #fff;
+  background: linear-gradient(white, #f9f9f9);
   padding: 30px;
   border-radius: 16px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
   max-width: 600px;
   width: 100%;
   animation: fadeIn 0.5s ease-in-out;
+}
+
+.container:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
 h1 {
@@ -39,12 +45,15 @@ h1 {
   padding: 8px 12px;
   border-radius: 6px;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
 #question {
   font-size: 20px;
   margin-bottom: 20px;
   color: #333;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
 }
 
 #answers button {
@@ -64,6 +73,11 @@ h1 {
 #answers button:hover {
   background-color: #007BFF;
   color: white;
+}
+
+#answers button:focus {
+  outline: 2px solid #007BFF;
+  outline-offset: 2px;
 }
 
 .correct {
@@ -104,6 +118,9 @@ h1 {
   color: #333;
 }
 
+footer {
+  margin-top: 30px;
+}
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -113,6 +130,19 @@ h1 {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+@keyframes fadeBody {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.hidden {
+  display: none !important;
 }
 
 body.dark {
