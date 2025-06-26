@@ -62,4 +62,17 @@ To deploy this app using GitHub Pages:
 - The final score is shown when all questions are completed.
 
 
+## Browser Compatibility
+
+Tested on:
+
+- Chrome (latest)
+- Firefox
+- Microsoft Edge
+- Safari (iOS)
+
+> Responsive on mobile and desktop
+
+
+
 
