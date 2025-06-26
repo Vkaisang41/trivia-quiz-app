@@ -54,3 +54,12 @@ To deploy this app using GitHub Pages:
   You can also host with Netlify, Vercel, or local server tools.
 
 
+## Usage Notes
+
+- Use the **Toggle Dark Mode** button for better viewing in low light.
+- The quiz provides **immediate feedback** after each answer.
+- The **Next Question** button appears only after answering.
+- The final score is shown when all questions are completed.
+
+
+
