@@ -41,3 +41,16 @@ The **Trivia Quiz App** tests your general knowledge using multiple-choice quest
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
+
+## Deployment
+
+To deploy this app using GitHub Pages:
+
+1. Push your project to GitHub
+2. Go to **Settings > Pages**
+3. Select the `main` branch and `/ (root)` folder
+4. GitHub will provide a live URL for your site
+
+  You can also host with Netlify, Vercel, or local server tools.
+
+
