@@ -81,6 +81,18 @@ Tested on:
 
 > Replace this with your actual GitHub Pages link if needed.
 
+## Deployment
+
+To deploy this app using GitHub Pages:
+
+1. Push your project to GitHub.
+2. Go to **Settings > Pages**.
+3. Under "Branch", select `main` and `/ (root)` folder.
+4. GitHub will give you a public URL — copy it and share it.
+
+You can also use platforms like **Netlify** or **Vercel** for deployment.
+
+
 
 
 
