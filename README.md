@@ -92,7 +92,6 @@ To deploy this app using GitHub Pages:
 
 You can also use platforms like **Netlify** or **Vercel** for deployment.
 
----
 
 ## Contributing
 
@@ -104,6 +103,12 @@ To contribute:
 2. Create a new branch (`git checkout -b feature-name`)
 3. Make your changes and commit
 4. Push to your fork and submit a Pull Request
+
+
+## Credits
+
+- [Open Trivia Database](https://opentdb.com/) — for providing trivia questions
+
 
 
 
