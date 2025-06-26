@@ -29,3 +29,11 @@ The **Trivia Quiz App** tests your general knowledge using multiple-choice quest
    git clone https://github.com/vkaisang41/trivia-quiz-app.git
    cd trivia-quiz-app
 
+## Technologies Used
+
+- HTML
+- CSS
+- JavaScript
+- Open Trivia Database API
+
+
