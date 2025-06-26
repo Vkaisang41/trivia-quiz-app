@@ -1,7 +1,9 @@
+
 const questionEl = document.getElementById('question');
 const answersEl = document.getElementById('answers');
 const nextBtn = document.getElementById('next-btn');
 const scoreEl = document.getElementById('score');
+let toggleBtn = document.getElementById('toggle-dark');
 
 let currentQuestion = {};
 let score = 0;
@@ -21,6 +23,7 @@ function shuffle(array) {
 function showQuestion() {
   let q = questions[questionIndex];
   questionEl.textContent = decodeHTML(q.question);
+   console.log("Question loaded:", q.question);
 
   const allAnswers = shuffle([q.correct_answer, ...q.incorrect_answers].map(decodeHTML));
   answersEl.innerHTML = '';
@@ -73,7 +76,6 @@ function startQuiz() {
     });
 }
 
-const toggleBtn = document.getElementById('toggle-dark');
 toggleBtn.addEventListener('click', () => {
   document.body.classList.toggle('dark');
   const isDark = document.body.classList.contains('dark');
