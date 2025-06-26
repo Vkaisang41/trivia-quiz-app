@@ -73,6 +73,15 @@ Tested on:
 
 > Responsive on mobile and desktop
 
+---
+
+## Live Demo
+
+[View the Live App](https://vkaisang41.github.io/trivia-quiz-app)
+
+> Replace this with your actual GitHub Pages link if needed.
+
+
 
 
 
