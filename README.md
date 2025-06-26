@@ -109,6 +109,19 @@ To contribute:
 
 - [Open Trivia Database](https://opentdb.com/) — for providing trivia questions
 
+---
+
+## FAQ
+
+### Q: Can I use this app offline?
+
+A: It works offline after initial load, but requires internet to fetch questions.
+
+### Q: Why do some characters look strange in the questions?
+
+A: The API returns HTML-encoded characters. We decode them using JavaScript so they display properly.
+
+
 
 
 
