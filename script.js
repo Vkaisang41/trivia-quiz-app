@@ -1,40 +1,31 @@
 // === Trivia Quiz App JS Logic ===
 
-// DOM Elements
 const questionEl = document.getElementById('question');
 const answersEl = document.getElementById('answers');
 const nextBtn = document.getElementById('next-btn');
 const scoreEl = document.getElementById('score');
-let toggleBtn = document.getElementById('toggle-dark');
+const toggleBtn = document.getElementById('toggle-dark');
+const searchBtn = document.getElementById('search-btn');
+const searchInput = document.getElementById('category-search');
 
-// Variables
 let currentQuestion = {};
 let score = 0;
 let questionIndex = 0;
 let questions = [];
 
-// Utility Functions
-
-// Decode HTML entities
 function decodeHTML(html) {
   const txt = document.createElement("textarea");
   txt.innerHTML = html;
   return txt.value;
 }
 
-// Shuffle array
 function shuffle(array) {
   return array.sort(() => Math.random() - 0.5);
 }
 
-// Quiz Logic
-
-// Display a question
 function showQuestion() {
-  let q = questions[questionIndex];
+  const q = questions[questionIndex];
   questionEl.textContent = decodeHTML(q.question);
-  console.log("Question loaded:", q.question); // Debug
-
   const allAnswers = shuffle([q.correct_answer, ...q.incorrect_answers].map(decodeHTML));
   answersEl.innerHTML = '';
 
@@ -46,7 +37,6 @@ function showQuestion() {
   });
 }
 
-// Check selected answer
 function checkAnswer(selected, correct) {
   const buttons = answersEl.querySelectorAll('button');
   buttons.forEach(btn => {
@@ -66,7 +56,6 @@ function checkAnswer(selected, correct) {
   nextBtn.style.display = 'block';
 }
 
-// Handle next button click
 nextBtn.onclick = () => {
   questionIndex++;
   if (questionIndex < questions.length) {
@@ -79,31 +68,38 @@ nextBtn.onclick = () => {
   }
 };
 
-// Start the quiz
-function startQuiz() {
-  fetch('https://opentdb.com/api.php?amount=5&category=17&difficulty=easy&type=multiple')
+function startQuiz(category = '17') {
+  fetch(`https://opentdb.com/api.php?amount=5&category=${category}&difficulty=easy&type=multiple`)
     .then(res => res.json())
     .then(data => {
+      if (!data.results.length) {
+        questionEl.textContent = "No questions found.";
+        answersEl.innerHTML = '';
+        nextBtn.style.display = 'none';
+        return;
+      }
+      score = 0;
+      questionIndex = 0;
       questions = data.results;
+      scoreEl.textContent = `Score: ${score}`;
+      nextBtn.style.display = 'none';
       showQuestion();
     });
 }
 
-// Dark Mode
-
-// Toggle theme
-toggleBtn.addEventListener('click', () => {
-  document.body.classList.toggle('dark');
-  const isDark = document.body.classList.contains('dark');
-  localStorage.setItem('theme', isDark ? 'dark' : 'light');
+searchBtn.addEventListener('click', () => {
+  const category = searchInput.value.trim();
+  if (category) startQuiz(category);
 });
 
-// Load saved theme and start quiz
+toggleBtn.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+  localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+});
+
 window.addEventListener('DOMContentLoaded', () => {
   if (localStorage.getItem('theme') === 'dark') {
     document.body.classList.add('dark');
   }
   startQuiz();
 });
-
-// TODO: Add restart button feature

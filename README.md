@@ -1,131 +1,43 @@
 # Trivia Quiz App
 
-> A fun and educational single-page quiz app built with HTML, CSS, and JavaScript using the [Open Trivia Database](https://opentdb.com/) API.
+> A responsive trivia quiz game using HTML, CSS, and JavaScript powered by the [Open Trivia Database](https://opentdb.com/) API.
+
 
 ## Author
 
 **Vincent Kaisang**
 
+
 ## Description
 
-The **Trivia Quiz App** tests your general knowledge using multiple-choice questions from the *Science & Nature* category. It's built as a single-page application with a clean UI, interactive design, and instant feedback.
+The **Trivia Quiz App** is a fun, interactive browser-based game where users test their knowledge by answering multiple-choice questions. Users can select a category by ID, receive instant feedback, and toggle between light and dark themes.
+
 
 ## Features
 
-- Fetches random quiz questions from a public trivia API
-- Multiple-choice format with shuffled answer order
-- Instant visual feedback for correct/incorrect answers
-- Live score display as the quiz progresses
-- Toggleable **Dark Mode** for better readability in low light
-- Fully responsive layout for desktop and mobile devices
+- Fetches trivia questions from the Open Trivia DB API
+- Multiple-choice questions with randomized answers
+- Search by category ID (e.g., 17 for Science & Nature)
+- Dark mode toggle
+- Live score tracking
+- Fully responsive design for mobile and desktop
 
-> **Note**: When using Dark Mode, some characters (like symbols or encoded entities) may not render clearly in certain fonts. Light mode is preferred for best clarity.
+
+## File Structure
+
+trivia-quiz-app/
+├── index.html # Main HTML file
+├── style.css # Stylesheet (responsive + dark mode)
+├── script.js # JavaScript logic for quiz
+└── README.md # Documentation
+
 
 ## Setup Instructions
 
-1. **Clone this repository:**
+1. **Clone the repository:**
 
-   ```bash
-   git clone https://github.com/vkaisang41/trivia-quiz-app.git
-   cd trivia-quiz-app
-
-
-## Technologies Used
-
-- HTML
-- CSS
-- JavaScript
-- Open Trivia Database API
-
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-
-## Deployment
-
-To deploy this app using GitHub Pages:
-
-1. Push your project to GitHub
-2. Go to **Settings > Pages**
-3. Select the `main` branch and `/ (root)` folder
-4. GitHub will provide a live URL for your site
-
-  You can also host with Netlify, Vercel, or local server tools.
-
-
-## Usage Notes
-
-- Use the **Toggle Dark Mode** button for better viewing in low light.
-- The quiz provides **immediate feedback** after each answer.
-- The **Next Question** button appears only after answering.
-- The final score is shown when all questions are completed.
-
-
-## Browser Compatibility
-
-Tested on:
-
-- Chrome (latest)
-- Firefox
-- Microsoft Edge
-- Safari (iOS)
-
-> Responsive on mobile and desktop
-
----
-
-## Live Demo
-
-[View the Live App](https://vkaisang41.github.io/trivia-quiz-app)
-
-> Replace this with your actual GitHub Pages link if needed.
-
-## Deployment
-
-To deploy this app using GitHub Pages:
-
-1. Push your project to GitHub.
-2. Go to **Settings > Pages**.
-3. Under "Branch", select `main` and `/ (root)` folder.
-4. GitHub will give you a public URL — copy it and share it.
-
-You can also use platforms like **Netlify** or **Vercel** for deployment.
-
-
-## Contributing
-
-Contributions, bug reports, and feature suggestions are welcome!
-
-To contribute:
-
-1. Fork this repository
-2. Create a new branch (`git checkout -b feature-name`)
-3. Make your changes and commit
-4. Push to your fork and submit a Pull Request
-
-
-## Credits
-
-- [Open Trivia Database](https://opentdb.com/) — for providing trivia questions
-
----
-
-## FAQ
-
-### Q: Can I use this app offline?
-
-A: It works offline after initial load, but requires internet to fetch questions.
-
-### Q: Why do some characters look strange in the questions?
-
-A: The API returns HTML-encoded characters. We decode them using JavaScript so they display properly.
-
-
-
-
-
-
-
+```bash
+git clone https://github.com/vkaisang41/trivia-quiz-app.git
+cd trivia-quiz-app
 
 
